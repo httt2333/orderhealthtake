@@ -1,0 +1,13 @@
+{
+  "name": "anxin-pillbox-web-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "安心药盒：药单变化理解助手，多页面静态 Web 原型（模拟资料，非医疗用途）",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": {"node": ">=18"}
+}
