@@ -9,7 +9,7 @@ const pages={
  '/':'今天做什么？', '/elder/home':'今天做什么？','/elder/start':'医生换药了','/elder/waiting':'请家人帮忙',
  '/elder/overview':'还没有核对结果','/elder/changes/0':'还没有核对结果','/elder/help':'别着急',
  '/elder/summary':'还没有核对结果','/elder/history':'过去的资料核对','/elder/settings':'怎样看着更舒服',
- '/elder/setup':'添加用药安排','/elder/edit-plan':'填写用药时间','/elder/today':'今天用药','/elder/reminders':'用药提醒',
+ '/elder/setup':'添加用药安排','/elder/edit-plan':'填写用药安排','/elder/today':'今天用药','/elder/reminders':'用药提醒',
  '/family/dashboard':'帮忙核对药单','/family/sources':'准备药单','/family/extraction-review':'检查文字',
  '/family/compare':'还差一步','/demo/scenarios':'选择一种演示情境'
 };

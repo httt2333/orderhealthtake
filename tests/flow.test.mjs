@@ -37,8 +37,8 @@ test('老人无需家属可加载示例并独立完成查看与提醒',()=>{
  data=JSON.parse(cache.anxin_case_web_v1);
  assert.ok(Object.keys(data.taken).some(k=>k.endsWith(':sample-a')));
  route('/elder/reminders');assert.match(container.innerHTML,/试听提醒/);
- click('edit-plan',{id:'sample-c'});assert.match(container.innerHTML,/修改用药时间/);
+ click('edit-plan',{id:'sample-c'});assert.match(container.innerHTML,/修改用药安排/);
 });
 test('录入表单独立路径不依赖家属角色和模型密钥',()=>{
- route('/elder/edit-plan');assert.match(container.innerHTML,/药品名称/);assert.match(container.innerHTML,/每次数量/);assert.match(container.innerHTML,/提醒时间/);
+ route('/elder/edit-plan');assert.match(container.innerHTML,/药品名称/);assert.match(container.innerHTML,/每次数量/);assert.match(container.innerHTML,/服用时间/);
 });

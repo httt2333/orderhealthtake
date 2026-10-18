@@ -246,5 +246,8 @@
 .solo-choice-copy small{font-size:15px;font-weight:650;color:#668476}
 .reminder-limit{margin-top:-10px;color:#657d71;font-size:16px;font-weight:650}
 @media(max-width:760px){.solo-flow{gap:18px}.solo-flow .focus-hero-icon{height:96px;width:96px;border-radius:25px;margin:0 auto}.solo-flow .focus-hero-icon svg{height:58px;width:58px}.solo-empty{font-size:23px;margin:0}.solo-flow .focus-heading{gap:5px}.reminder-limit{font-size:15px;margin-top:-5px}}
+.plan-confirm .solo-plan-card{margin-top:10px}
+.plan-confirm-hint{font-size:18px;font-weight:700;text-align:center;color:#536e60}
+.plan-confirm .focus-actions{margin-top:12px}
 .site:has(.family-med-list) .content{padding-top:20px}
 .site:has(.family-med-list) .bottom-actions .btn{min-height:67px;font-size:18px}
