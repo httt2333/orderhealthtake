@@ -249,5 +249,14 @@
 .plan-confirm .solo-plan-card{margin-top:10px}
 .plan-confirm-hint{font-size:18px;font-weight:700;text-align:center;color:#536e60}
 .plan-confirm .focus-actions{margin-top:12px}
+.solo-plan-card.is-unsure{background:#fff8e9;border-color:#efd9a8}
+.is-unsure .solo-pill-icon{background:#fff0cd;color:#8a6121}
+.dose-record-state{font-size:16px!important;color:#456b58!important;font-weight:800!important}
+.dose-record-help{font-size:15px!important;color:#805c25!important;font-weight:650!important;line-height:1.35}
+.dose-record-actions{display:flex;flex-direction:column;gap:8px;flex-shrink:0}
+.dose-record-actions .solo-done,.solo-unsure{min-height:50px;padding:10px 13px;border-radius:14px;font-size:17px;font-weight:800;white-space:nowrap}
+.solo-unsure{background:#fff;color:#315f4a;border:2px solid #d3e2d6}
+.is-unsure .dose-record-actions .solo-done{background:#fff;border:2px solid #d5c197;color:#6f562b}
+@media(max-width:820px){.dose-record-actions{gap:6px}.dose-record-actions .solo-done,.solo-unsure{min-height:45px;padding:8px 10px;font-size:16px}}
 .site:has(.family-med-list) .content{padding-top:20px}
 .site:has(.family-med-list) .bottom-actions .btn{min-height:67px;font-size:18px}
