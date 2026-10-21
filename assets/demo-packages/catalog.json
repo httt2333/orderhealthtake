@@ -1,0 +1,72 @@
+[
+  {
+    "id": "amoxicillin",
+    "name": "阿莫西林胶囊",
+    "label": "阿莫西林胶囊",
+    "spec": "规格 0.25g；每小盒24粒",
+    "note": "规格不是每次用量，服用安排需按药单填写",
+    "status": "可读",
+    "sourceIndex": 1,
+    "sourceFile": "codex-clipboard-5641bce6-d26b-482b-bb50-4856092b4cfd.png",
+    "imagePath": "assets/demo-packages/amoxicillin.jpg",
+    "recognitionMode": "curated_example",
+    "dose": "",
+    "time": ""
+  },
+  {
+    "id": "cefdinir",
+    "name": "头孢地尼胶囊",
+    "label": "头孢地尼胶囊",
+    "spec": "0.1g × 6粒",
+    "note": "包装规格需对照实物核对",
+    "status": "可读",
+    "sourceIndex": 2,
+    "sourceFile": "codex-clipboard-76cee888-1401-44b1-9be5-8a8f316776fd.png",
+    "imagePath": "assets/demo-packages/cefdinir.jpg",
+    "recognitionMode": "curated_example",
+    "dose": "",
+    "time": ""
+  },
+  {
+    "id": "vitamin-c-red",
+    "name": "维生素C含片",
+    "label": "维生素C含片 红白瓶",
+    "spec": "包装写有营养素补充剂；净含量60g",
+    "note": "小字待核对，不自动填写用量",
+    "status": "部分待核对",
+    "sourceIndex": 3,
+    "sourceFile": "codex-clipboard-c7766dee-9045-49cb-8250-77c072596f3f.png",
+    "imagePath": "assets/demo-packages/vitamin-c-red.jpg",
+    "recognitionMode": "curated_example",
+    "dose": "",
+    "time": ""
+  },
+  {
+    "id": "vitamin-c-orange",
+    "name": "维生素C含片",
+    "label": "维生素C含片 品健橙色包装",
+    "spec": "净含量65g（100片）；营养素补充剂",
+    "note": "包装写有保健食品不是药物，与其他维C包装分开核对",
+    "status": "可读",
+    "sourceIndex": 4,
+    "sourceFile": "codex-clipboard-2960527f-c388-4af2-9faa-81694fc7f7bd.png",
+    "imagePath": "assets/demo-packages/vitamin-c-orange.jpg",
+    "recognitionMode": "curated_example",
+    "dose": "",
+    "time": ""
+  },
+  {
+    "id": "vitamin-c-child",
+    "name": "维生素C含片",
+    "label": "维生素C含片 包装有儿童标记",
+    "spec": "包装含儿童标记；完整名称待核对",
+    "note": "请核对完整名称和使用人，再继续",
+    "status": "需核对使用人",
+    "sourceIndex": 5,
+    "sourceFile": "codex-clipboard-c64565e1-c3f7-49b1-b634-7e0c5da10ef6.png",
+    "imagePath": "assets/demo-packages/vitamin-c-child.jpg",
+    "recognitionMode": "curated_example",
+    "dose": "",
+    "time": ""
+  }
+]

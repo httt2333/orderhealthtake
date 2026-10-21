@@ -22,4 +22,8 @@
 
 ## 验收命令
 
-`npm run dev`, `npm test`。50项通过；浏览器实际运行与完整端到端测试待补。
+`npm run dev`, `npm test`。当前56项通过；受限环境可对六个测试文件分别运行 `node --test --test-isolation=none tests/<文件名>.test.mjs`。已查看实际浏览器示例页，完整端到端与手机验收待补。
+
+## 五种包装预置识别演示
+
+入口 `#/elder/examples`，结果 `#/elder/package/:id`。数据在 `src/package-examples.js`，图片来源与字段在 `assets/demo-packages/catalog.json`。确认后仅带入草稿照片和名称，数量、时间必须手填；同名维C不合并。预置数据不是实时识别。`tools/build_single_preview.py` 同步单文件，`tools/build_recognition_report.py` 生成交付文档及内部设计图；内部 `artifacts/` 不提交。
