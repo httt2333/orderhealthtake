@@ -13,5 +13,5 @@ const pages={
  '/family/dashboard':'帮忙核对药单','/family/sources':'准备药单','/family/extraction-review':'检查文字',
  '/family/compare':'还差一步','/demo/scenarios':'选择一种演示情境'
 };
-for(const [route,expected] of Object.entries(pages))test(`路由渲染：${route}`,()=>{location.hash='#'+route;listeners.hashchange();assert.match(appNode.innerHTML,new RegExp(expected));assert.match(appNode.innerHTML,/仅供|虚构|演示/);});
+for(const [route,expected] of Object.entries(pages))test(`路由渲染：${route}`,()=>{location.hash='#'+route;listeners.hashchange();assert.match(appNode.innerHTML,new RegExp(expected));assert.match(appNode.innerHTML,/仅供|虚构|演示/);assert.equal((appNode.innerHTML.match(/id="voice-task-button"/g)||[]).length,1);assert.equal((appNode.innerHTML.match(/data-action="dictate"/g)||[]).length,1);});
 test('初始网页无需外部AI即可渲染',()=>{location.hash='#/';listeners.hashchange();assert.match(appNode.innerHTML,/landing-minimal/);});
