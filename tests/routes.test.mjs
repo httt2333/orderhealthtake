@@ -6,7 +6,7 @@ globalThis.window={addEventListener(k,cb){listeners[k]=cb},scrollTo(){},speechSy
 globalThis.document={querySelector(q){if(q==='#app')return appNode;if(q==='#announcer')return {textContent:''};return null;},addEventListener(k,cb){listeners[`document-${k}`]=cb;},title:''};
 await import('../src/app.js');
 const pages={
- '/':'今天做什么？', '/elder/home':'今天做什么？','/elder/start':'医生换药了','/elder/waiting':'请家人帮忙',
+ '/':'今天做什么？', '/elder/home':'今天做什么？','/elder/start':'我可以帮您做什么','/elder/waiting':'请家人帮忙',
  '/elder/overview':'还没有核对结果','/elder/changes/0':'还没有核对结果','/elder/help':'别着急',
  '/elder/summary':'还没有核对结果','/elder/history':'过去的资料核对','/elder/settings':'怎样看着更舒服',
  '/elder/setup':'添加用药安排','/elder/edit-plan':'填写用药安排','/elder/today':'今天用药','/elder/reminders':'用药提醒',
