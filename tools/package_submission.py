@@ -21,6 +21,7 @@ guide = f'''安心药盒｜场景 A 提交说明
 1. 01_产品说明：用户、核心问题、优先理由、完整流程、智能参与方式与关键假设；另附6页包装识别与页面方案。
 2. 02_可运行Demo与源码：无需第三方依赖，含单文件预览、源码、测试及运行说明。
 3. 03_验证与复盘：已有证据、未验证假设、验证计划与再给两小时的优先事项。
+4. 04_补充调研与历史PRD：两份原始调研报告、V1.0 PRD及材料来源说明。历史PRD不替代当前产品说明。
 
 建议评审顺序
 先看01_产品说明，再启动02中的Demo；添加用药→试用示例→选择一个包装→核对→填写测试安排→核对并保存→今天用药看图、听安排、记录。
@@ -55,6 +56,8 @@ with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as z:
         z.write(ROOT/'挑战交付'/name, prefix+'01_产品说明/'+name)
     z.write(ROOT/'挑战交付/03_复盘.md', prefix+'03_验证与复盘/复盘.md')
     z.write(ROOT/'QA_LOG.md', prefix+'03_验证与复盘/QA_LOG.md')
+    for attachment in sorted((ROOT/'挑战交付/补充材料').glob('*.md')):
+        z.write(attachment, prefix+'04_补充调研与历史PRD/'+attachment.name)
     names = ['index.html','styles.css','server.mjs','package.json','README.md','CODEX_HANDOFF.md','安心药盒_V1.5_单文件预览.html']
     for folder in ['src','assets','tests']:
         names.extend(str(p.relative_to(ROOT)) for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
