@@ -27,3 +27,19 @@ test('切换页面中止旧识别，旧结果不会把用户带走',()=>{
 test('不支持语音时保留按钮操作并说明原因',()=>{
  delete window.SpeechRecognition;click();assert.match(status.textContent,/不支持语音/);assert.equal(location.hash,'#/elder/reminders');
 });
+const replies=[];
+function enableReplies(){window.SpeechRecognition=Recognition;window.speechSynthesis.speak=u=>replies.push(u);globalThis.SpeechSynthesisUtterance=class{constructor(text){this.text=text}};}
+test('识别成功先回应任务名称，回应结束后才打开页面',()=>{
+ enableReplies();const before=location.hash;click();sessions.at(-1).onresult({results:[[{transcript:'今天吃什么药'}]]});
+ assert.equal(location.hash,before);assert.equal(button.dataset.state,'responding');assert.equal(replies.at(-1).text,'正在打开今天的药');
+ replies.at(-1).onend();assert.equal(location.hash,'#/elder/today');assert.match(status.textContent,/已打开今天的药/);
+});
+test('回应时再次点击取消，旧回应结束不会导航',()=>{
+ click();sessions.at(-1).onresult({results:[[{transcript:'添加用药'}]]});const old=replies.at(-1);click();old.onend();assert.equal(location.hash,'#/elder/today');assert.match(status.textContent,/已取消/);
+});
+test('手动离开页面后旧回应不能抢回导航',()=>{
+ click();sessions.at(-1).onresult({results:[[{transcript:'添加用药'}]]});const old=replies.at(-1);location.hash='#/elder/home';handlers.hashchange();old.onend();assert.equal(location.hash,'#/elder/home');
+});
+test('回应播放失败仍能打开正确任务，不停留等待',()=>{
+ click();sessions.at(-1).onresult({results:[[{transcript:'设置提醒'}]]});replies.at(-1).onerror();assert.equal(location.hash,'#/elder/reminders');
+});
